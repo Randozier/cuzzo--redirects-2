@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting to Spotify...</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <p>Sending you to Spotify...</p>
+    <script>
+      fetch("https://hooks.zapier.com/hooks/catch/23503220/uojsrv2/?click_id=spotify_click_rando")
+        .then(() => {
+          window.location.href = "https://open.spotify.com/artist/33TaOp205etFCQV05rTd4v?si=KnOXPQDJSY6finMjaCviKA";
+        })
+        .catch(() => {
+          // Still redirect even if Zapier fails
+          window.location.href = "https://open.spotify.com/artist/33TaOp205etFCQV05rTd4v?si=KnOXPQDJSY6finMjaCviKA";
+        });
+    </script>
+  </body>
+</html>
